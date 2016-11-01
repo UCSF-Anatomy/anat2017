@@ -1,305 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
 <title>Anatomy Department UCSF</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="nav.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="banners.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-
+</head>
 <body>
-<!--what not another navbar-->
 
+<!-- UCSF Banner Here -->
 <div class="w3-top">
-<header class="clearfix">
-    <div class="w3-container">
-			<div class="header-left">
-				<h1>Department of Anatomy</h1>
-        <h2>@UCSF</h2>
-			</div>
-			<div class="header-right">
-				<label for="open">
-					<span class="hidden-desktop"></span>
-				</label>
-				<input type="checkbox" name="blah" id="open">
-				<nav>
-					<a href="#">Home</a>
-					<a href="#">Faculty</a>
-					<a href="#">Teaching</a>
-					<a href="#">Contact</a>
-					<a href="#">Willed Body Program</a>
-          <a href="#">Graduate Programs</a>
-          <a href="#">History</a>
-				</nav>
-			</div>
-		</div>
-</header>
-</div>
-<!-- Navbar
-
-<ul class="w3-navbar w3-black w3-card-2 w3-left-align">
-  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-    <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-  </li>
-  <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
-  <li class="w3-hide-small"><a href="#" class="w3-padding-large">BAND</a></li>
-  <li class="w3-hide-small"><a href="#" class="w3-padding-large">TOUR</a></li>
-  <li class="w3-hide-small"><a href="#" class=" w3-padding-large">CONTACT</a></li>
-  <li class="w3-hide-small w3-dropdown-hover">
-    <a href="javascript:void(0)" class="w3-hover-none w3-padding-large" title="More">MORE <i class="fa fa-caret-down"></i></a>
-    <div class="w3-dropdown-content w3-white w3-card-4">
-      <a href="#">Merchandise</a>
-      <a href="#">Extras</a>
-      <a href="#">Media</a>
+  <div id="ucsf-banner-nav" class="no-logo">
+    <div class="top-header-container row">
+        <ul class="menu">
+          <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+          <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+          <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+          <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+        </ul>
     </div>
-  </li>
-  <li class="w3-hide-small w3-right"><a href="javascript:void(0)" class="w3-padding-large w3-hover-red"><i class="fa fa-search"></i></a></li>
-</ul>
-</div>-->
+  </div>
 
-<!-- Navbar on small screens
-<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <ul class="w3-navbar w3-left-align w3-black">
-    <li><a class="w3-padding-large" href="#">BAND</a></li>
-    <li><a class="w3-padding-large" href="#">TOUR</a></li>
-    <li><a class="w3-padding-large" href="#">CONTACT</a></li>
-    <li><a class="w3-padding-large" href="#">MERCH</a></li>
+<!-- Navbar (sit on top) -->
+  <ul class="w3-navbar w3-white w3-wide w3-padding-8 w3-card-2">
+    <li>
+      <a href="#home" class="w3-margin-left"><b>Anatomy Department</b>@ucsf</a>
+    </li>
+    <!-- Float links to the right. Hide them on small screens -->
+    <li class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-left">Faculty</a>
+      <a href="#about" class="w3-left">Teaching</a>
+            <a href="#about" class="w3-left">Staff</a>
+      <a href="#contact" class="w3-left w3-margin-right">About Us</a>
+    </li>
   </ul>
-</div>-->
+</div>
+
+<!-- Header Slideshow Here -->
+
+<header>
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides w3-display-container w3-center">
+      <img src="img/img1.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>Image</h3>
+        <p><b>Cool Text About Image 1!</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="img/img2.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>Image</h3>
+        <p><b>Cool Text About Image 2!</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="img/img3.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>image</h3>
+        <p><b>Cool Text About Image 3!</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="img/img4.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>image</h3>
+        <p><b>Cool Text About Image 4!</b></p>
+      </div>
+    </div>
+</header>
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:1800px;margin-top:0px">
 
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container">
-    <img src="home8.jpg" alt="perera-cells" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-black w3-padding-32 w3-hide-small">
-      <h3>Rushika Perera</h3>
-      <p><b>Some Cells Doing Cell Things</b></p>
-    </div>
-  </div>
-  <div class="mySlides w3-display-container">
-    <img src="home1.jpg" alt="Gross Anatomy Lab" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Gross Anatomy Lab</h3>
-      <p><b>Students Learning in the Lab</b></p>
-    </div>
-  </div>
-  <div class="mySlides w3-display-container">
-    <img src="home3.jpg" alt="chicago" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Anatomy Teaching Program</h3>
-      <p><b>Inspiring text here</b></p>
-    </div>
-  </div>
-  <div class="mySlides w3-display-container">
-    <img src="home6.jpg" alt="chicago" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Cool Science Image</h3>
-      <p><b>very cool image here</b></p>
-    </div>
-  </div>
-  <div class="mySlides w3-display-container">
-    <img src="home2.jpg" alt="chicago" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Basic Science Labs</h3>
-      <p><b>One of our Labs</b></p>
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+
+
+<!-- another 3 col layout -->
+
+<div class="w3-row-padding w3-center w3-margin-top">
+
+  <div class="w3-third">
+    <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+    <span class="w3-tag"><h4>Recent News</h4></span><br></p>
+    <img src="img/cell1.jpg" alt="John" style="width:100%">
+    <p>news feed here</p>
+    <p>more interesting info</p>
+    <p>Read More...</p>
     </div>
   </div>
 
-  <!-- The Faculty Section -->
-  <div class="w3-container w3-content w3-center w3-padding-12" style="max-width:800px">
-    <h2 class="w3-wide">Our Faculty</h2>
-    <p class="w3-opacity"><i>Basic Science Labs</i></p>
-    <p class="w3-justify">The faculty includes members of the National Academy of Sciences, the Institute of Medicine, the American Academy of Arts and Sciences, and Royal Society of London. In addition to their research effort, the faculty is committed to graduate and professional school education, with contributions to the medical, pharmacy and physical therapy students, as well as programs in continuing medical education. The Department is the administrative home of the Willed Body Program. </p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <p>Christopher Allen</p>
-        <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember1" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Allan Basbaum</p>
-        <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember2" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Evan Feinberg</p>
-        <img src="img_fac.jpg" class="w3-round" alt="banmember3" style="width:60%">
-      </div>
+  <div class="w3-third">
+    <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+    <span class="w3-tag"><h4>About Us</h4></span><br></p>
+    <img src="img/cell2.jpg" alt="John" style="width:100%">
+    <p>The Department of Anatomy includes 23 faculty members with primary full-time appointments, 16 faculty with joint appointments, and about 200 postdoctoral fellows and students engaged in research that covers questions in cell biology, developmental biology and the neurosciences. Faculty have laboratories at both the Parnassus Heights campus, where there is a focus of interest in cancer biology, and at the Mission Bay campus, where many of the neurobiology faculty are located. The administrative office of the Department is located at the Parnassus Heights campus. </p>
     </div>
   </div>
 
-  <div class="w3-container w3-content w3-center w3-padding-12" style="max-width:800px">
-  <div class="w3-row w3-padding-32">
+  <div class="w3-third">
+    <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+    <span class="w3-tag"><h4>Student Profile</h4></span><br></p>
+    <img src="https://static1.squarespace.com/static/55a2fe26e4b07c31913bc8ee/55a41fafe4b011c52032ab82/57db6672cd0f6852c74a3de0/1477977398157/IMG_4426_+Erica_crop.jpg?format=300w" alt="John" style="width:50%">
+    <p>Here is a profile on this months Graduate Student Erica Sanchez in the Perrera Lab read more....</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- another 3 col layout -->
+
+  <div class="w3-row-padding w3-center w3-margin-top">
+
     <div class="w3-third">
-      <p>Mark Le Gros</p>
-      <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember1" style="width:60%">
+      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+      <h4>Recent News</h4><br>
+      <img src="img/cell1.jpg" alt="John" style="width:100%">
+      <p>news feed here</p>
+      <p>more interesting info</p>
+      <p>Read More...</p>
+      </div>
     </div>
+
     <div class="w3-third">
-      <p>Donald McDonald</p>
-      <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember2" style="width:60%">
+      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+      <h4>About Us</h4><br>
+      <img src="img/cell2.jpg" alt="John" style="width:100%">
+      <p>The Department of Anatomy includes 23 faculty members with primary full-time appointments, 16 faculty with joint appointments, and about 200 postdoctoral fellows and students engaged in research that covers questions in cell biology, developmental biology and the neurosciences. Faculty have laboratories at both the Parnassus Heights campus, where there is a focus of interest in cancer biology, and at the Mission Bay campus, where many of the neurobiology faculty are located. The administrative office of the Department is located at the Parnassus Heights campus. </p>
+      </div>
     </div>
+
     <div class="w3-third">
-      <p>Keith Mostov</p>
-      <img src="img_fac.jpg" class="w3-round" alt="banmember3" style="width:60%">
-    </div>
-  </div>
-</div>
-
-<div class="w3-container w3-content w3-center w3-padding-12" style="max-width:800px">
-<div class="w3-row w3-padding-32">
-  <div class="w3-third">
-    <p>Keith Mostov</p>
-    <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember1" style="width:60%">
-  </div>
-  <div class="w3-third">
-    <p>Todd Nystul</p>
-    <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember2" style="width:60%">
-  </div>
-  <div class="w3-third">
-    <p>Rushika Perera</p>
-    <img src="img_fac.jpg" class="w3-round" alt="banmember3" style="width:60%">
-  </div>
-</div>
-</div>
-
-<div class="w3-container w3-content w3-center w3-padding-12" style="max-width:800px">
-<div class="w3-row w3-padding-32">
-  <div class="w3-third">
-    <p>Jason Rock</p>
-    <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember1" style="width:60%">
-  </div>
-  <div class="w3-third">
-    <p>Jeroen Roose</p>
-    <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember2" style="width:60%">
-  </div>
-  <div class="w3-third">
-    <p>Saul Vileda</p>
-    <img src="img_fac.jpg" class="w3-round" alt="banmember3" style="width:60%">
-  </div>
-</div>
-</div>
-
-<div class="w3-container w3-content w3-center w3-padding-12" style="max-width:800px">
-<div class="w3-row w3-padding-32">
-  <div class="w3-third">
-    <p>Zena Werb</p>
-    <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember1" style="width:60%">
-  </div>
-  <div class="w3-third">
-    <p>name</p>
-    <img src="img_fac.jpg" class="w3-round w3-margin-bottom" alt="banmember2" style="width:60%">
-  </div>
-  <div class="w3-third">
-    <p>name</p>
-    <img src="img_fac.jpg" class="w3-round" alt="banmember3" style="width:60%">
-  </div>
-</div>
-</div>
-
-  <hr>
-  <h2 class="w3-center">The Department</h2>
-  <div class="w3-container">
-  <div class="w3-accordion">
-    <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-hover-dark-grey w3-btn-block w3-left-align">Research</button>
-    <div id="Demo1" class="w3-accordion-content">
-      <div class="w3-container">
-        <p>The Department of Anatomy includes 23 faculty members with primary full-time appointments, 16 faculty with joint appointments, and about 200 postdoctoral fellows and students engaged in research that covers questions in cell biology, developmental biology and the neurosciences. Faculty have laboratories at both the Parnassus Heights campus, where there is a focus of interest in cancer biology, and at the Mission Bay campus, where many of the neurobiology faculty are located. The administrative office of the Department is located at the Parnassus Heights campus. </p>
+      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+      <h4>Grad Student Profile</h4><br>
+      <img src="https://static1.squarespace.com/static/55a2fe26e4b07c31913bc8ee/55a41fafe4b011c52032ab82/57db6672cd0f6852c74a3de0/1477977398157/IMG_4426_+Erica_crop.jpg?format=300w" alt="John" style="width:50%">
+      <p>Here is a profile on this months Graduate Student Erica Sanchez in the Perrera Lab read more....</p>
       </div>
     </div>
-    <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-hover-dark-grey w3-btn-block w3-left-align">Teaching</button>
-    <div id="Demo2" class="w3-accordion-content">
-      <a class="w3-text-black w3-padding-16" href="javascript:void(0)">Link 1</a>
-      <a class="w3-text-black w3-padding-16" href="javascript:void(0)">Link 2</a>
-      <a class="w3-text-black w3-padding-16" href="javascript:void(0)">Link 3</a>
     </div>
-    <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-hover-dark-grey w3-btn-block w3-left-align">Locations</button>
-    <div id="Demo3" class="w3-accordion-content w3-border">
-      <div class="w3-container">
-        <p>Anatomy Department Locations:</p>
-        <img src="missionbay.jpg" style="width:30%;" class="w3-animate-zoom">
-        <p>Mission Bay, San Francisco</p>
-      </div>
 
-      <div class="w3-container">
-        <p></p>
-        <img src="parnassus.jpg" style="width:30%;" class="w3-animate-zoom">
-        <p>Parnassus Campus, San Francisco</p>
-      </div>
-
-    </div>
-  </div>
-  </div>
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-    <h2 class="w3-wide w3-center">LEARN MORE</h2>
-    <p class="w3-opacity w3-center"><i>Contact Us!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> San Francisco, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: 151515<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Comment">
-        <button class="w3-btn w3-section w3-right">SEND</button>
-      </div>
-    </div>
-  </div>
-
-<!-- End Page Content -->
 </div>
+<!-- End page content -->
 
-<!-- Add Google Maps -->
-<div id="googleMap" style="height:400px;filter:grayscale(90%);-webkit-filter:grayscale(90%);"></div>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(37.7690403,-122.3910123);
-
-function initialize() {
-    var mapProp = {
-    center: myCenter,
-    zoom: 12,
-    scrollwheel: false,
-    draggable: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-    position: myCenter,
-});
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+<!-- Google Map -->
+<div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
-  <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
-  <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
-  <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
-  <p class="w3-medium">Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
+<!-- Add slideshow script -->
 <script>
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
@@ -327,20 +177,6 @@ function myFunction() {
     }
 }
 
-// Accordions
-function myAccFunc(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-dark-grey";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-        x.previousElementSibling.className =
-        x.previousElementSibling.className.replace(" w3-dark-grey", "");
-    }
-}
-
-
 // When the user clicks anywhere outside of the modal, close it
 var modal = document.getElementById('ticketModal');
 window.onclick = function(event) {
@@ -349,5 +185,34 @@ window.onclick = function(event) {
   }
 }
 </script>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+<!-- Google Map Location -->
+var myCenter = new google.maps.LatLng(37.7630086,-122.4602444);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 </body>
 </html>
