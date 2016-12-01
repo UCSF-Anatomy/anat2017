@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anatomy Department UCSF</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="banners.css">
+</head>
+<body>
+
+<!-- UCSF Banner Here -->
+<div class="w3-top">
+  <div id="ucsf-banner-nav" class="no-logo">
+    <div class="top-header-container row">
+        <ul class="menu">
+          <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+          <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+          <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+          <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+        </ul>
+    </div>
+  </div>
+
+ <!-- Navbar (sit on top) -->
+  <ul class="w3-navbar w3-white w3-wide w3-padding-8 w3-card-2">
+    <li>
+      <a href="#home" class="w3-margin-left"><b>Anatomy Department</b>@ucsf</a>
+    </li>
+    <!-- Float links to the right. Hide them on small screens -->
+   <li class="w3-right w3-hide-small">
+      <a href="faculty.html" class="w3-left">Faculty</a>
+      <a href="teaching.html" class="w3-left">Teaching</a>
+      <a href="staff.html" class="w3-left">Staff</a>
+      <a href="http://willedbodyprogram.ucsf.edu" class="w3-left">Willed Body Program</a>
+      <a href="contact.html" class="w3-left w3-margin-right">About Us</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Header Slideshow Here -->
+
+<header>
+    <!-- Automatic Slideshow Images -->
+    <!--no slideshow
+    <div class="mySlides w3-display-container w3-center">
+      <img src="img/img1.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>Image</h3>
+        <p><b>Cool Text About Image 1!</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="img/img2.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>Image</h3>
+        <p><b>Cool Text About Image 2!</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="img/img3.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>image</h3>
+        <p><b>Cool Text About Image 3!</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="img/img4.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>image</h3>
+        <p><b>Cool Text About Image 4!</b></p>
+      </div>
+    </div> for now-->
+</header>
+
+<!-- Page content -->
+
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+<!--profiles data here-->
+
+    <!-- get data from the UCSF Profiles API -->
+    <script>
+
+// we're grabbing data from the UCSF Profiles JSON API v2
+// details at http://opendata.profiles.ucsf.edu/json-v2.html
+
+// we get the Profiles URL name from the URL, e.g. "http://profiles.ucsf.edu/jeanette.brown"
+// but you can also specify people by FNO, Profiles ID, Employee ID, etc.
+add_profiles_user_content('ProfilesURLName', 'jeffrey.bluestone');
+// for example try commenting out the line above, and uncommenting the line below
+// add_profiles_user_content('FNO', 'Jeffrey.Bluestone@ucsf.edu');
+
+
+function add_profiles_user_content (identifier_type, identifier) {
+    $.getJSON('http://api.profiles.ucsf.edu/json/v2/?source=JSON_API_v2_example_script_change_this_in_your_own_app&' + identifier_type + '=' + identifier + '&callback=?',
+	      function(response) {
+		  if (response) {
+		      if (response.error) { // if UCSF Profiles reports an error, can do something with that here
+			  if (window.console && window.console.log) {
+			      console.log('Error from UCSF Profiles API: ' + response.error);
+			      // alert('Error from UCSF Profiles API: ' + response.error);
+			  }
+		      } else {
+
+			  $(document).ready(function() {   // execute the following code after DOM is ready
+
+			      var data = response.Profiles[0];
+
+			      if (data.Name) { // show name, if we have it
+				  $('#profiles_name').text(data.Name);
+			      }
+			      if (data.ProfilesURL) { // add link to Profiles
+				  $('#profiles_page_link_container').empty().show().append('<a href="' + data.ProfilesURL + '" title="Go to UCSF Profiles, powered by CTSI" rel="me">UCSF Profiles page</a>');
+			      } else {
+				  $('#profiles_page_link_container').empty().hide();
+			      }
+			      if (data.PhotoURL) { // show photo, if we have it
+				  $('#profiles_photo_container').empty().show().append($('<img class="img-circle" id="profiles_photo" />').attr('src', data.PhotoURL).error(function(){this.style.display='none'}));
+			      } else {
+				  $('#profiles_photo_container').empty().hide();
+			      }
+			      if (data.Narrative) { // show narrative, if we have it
+				  // truncate text to 500 characters, and delete any partial last sentence
+			          var truncated_narrative = data.Narrative.substr(0,500).replace(/[\s\r\n]/g, " ").replace(/^(.+\.[\s\n\r]).*?$/g, "$1");
+				  $('#profiles_narrative').show().text(truncated_narrative);
+			      } else {
+				  $('#profiles_narrative').hide();
+			      }
+			      if (data.Email) { // show narrative, if we have it
+				  $('#profiles_email_link_container').empty().show().append('<a href="mailto:' + data.Email + '">' + data.Email + '</a>');
+			      } else {
+				  $('#profiles_email_link_container').hide();
+			      }
+			      if (data.Publications && data.Publications.length > 0) {
+				  $('#profiles_publications ol').remove();
+				  $('#profiles_publications').show().append($('<ol id="profiles_publications_list"></ol>'));
+				  jQuery.each(data.Publications, function() {
+				      var li = $('<li id="profiles_publications_li" />'); // create new list item
+				      li.append(this.PublicationTitle + ' '); // add the publication name
+				      if (this.PublicationSource && this.PublicationSource.length > 0) { // ...and a link, if available
+					  li.append($('<a class="profiles_publication_link" />').attr('href', this.PublicationSource[0].PublicationSourceURL).text('View on ' + this.PublicationSource[0].PublicationSourceName));
+				      }
+				      $('#profiles_publications_list').append(li); // insert the list item
+				  });
+			      } else {
+				  $('#profiles_publications').hide();
+			      }
+			      if (data.AwardOrHonors && data.AwardOrHonors.length > 0) {
+				  $('#profiles_awards_list').remove();
+				  $('#profiles_awards').show().append($('<ul id="profiles_awards_list"></ul>'));
+				  jQuery.each(data.AwardOrHonors, function() {
+				      var li = $('<li />').append(this.Summary);
+				      $('#profiles_awards_list').append(li);
+				  });
+			      } else {
+				  $('#profiles_awards').hide();
+			      }
+
+			      $("html, body").animate({ scrollTop: 0 }, 100);
+			      $("[id^='profiles_']:visible").fadeIn(100).fadeOut(100).fadeIn(100);
+			  });
+
+		      }
+		  }
+	      }
+	     );
+}
+
+function highlight_profiles_content (seconds) {
+    var ms = (seconds || 1) * 1000;
+    $( "[id^='profiles_']" ).addClass('highlighted');
+    setTimeout(function() {
+	$( "[id^='profiles_']" ).removeClass('highlighted');
+    }, ms);
+}
+
+    </script>
+
+  <body>
+
+    <div class="container">
+
+      <!-- start of content automatically grabbed from Profiles -->
+      <div class="jumbotron">
+	<div id="profiles_photo_container"></div>
+	<h1 id="profiles_name"></h1>
+	<p id="profiles_narrative"></p>
+      </div>
+      <div class="row">
+	<div class="col-md-7 col-md-offset-1"> <!-- start first column -->
+
+	  <h2>Connect</h2>
+	  <ul>
+	    <li id="profiles_email_link_container"></li>
+	    <li id="profiles_page_link_container"></li>
+	  </ul>
+
+	  <div id="profiles_awards"><h2>Awards</h2></div>
+	  <div id="profiles_publications"><h2>Publications</h2></div>
+
+
+	</div> <!-- /first column -->
+	<!-- end of content automatically grabbed from Profiles -->
+
+	<div class="col-md-4"> <!-- second column -->
+
+	  <div class="alert alert-success">
+
+	    <h4>This page is an example of loading live data from the UCSF Profiles API:</h4>
+
+	    <ul>
+	      <li>we add the name, email, Profiles link, overview</li>
+	      <li>we list all publications, with links back to PubMed</li>
+	      <li>we show a photo</li>
+	    </ul>
+
+	    <h5>1. Click to see what the API added:</h5>
+
+	    <div class="btn-group-vertical">
+	      <a class="btn btn-default" href="javascript:void(0)" onclick="highlight_profiles_content()">Click to highlight API content <span class="glyphicon glyphicon-chevron-right"></span></a>
+	    </div>
+
+	    <h5>2. Click to switch between users:</h5>
+
+	    <div class="btn-group-vertical">
+	      <a class="btn btn-default" href="javascript:void(0)" onclick="add_profiles_user_content('ProfilesURLName', 'jeanette.brown')">Show Jeanette Brown</a>
+	      <a class="btn btn-default" href="javascript:void(0)" onclick="add_profiles_user_content('ProfilesURLName', 'craig.cohen')">Show Craig Cohen</a>
+	      <a class="btn btn-default" href="javascript:void(0)" onclick="add_profiles_user_content('ProfilesURLName', 'anirvan.chatterjee')">Show Anirvan Chatterjee</a>
+	      <a class="btn btn-default" href="javascript:void(0)" onclick="add_profiles_user_content('ProfilesURLName', 'sabine.mueller')">Show Sabine Müller</a>
+	      <a class="btn btn-default" href="javascript:void(0)" onclick="add_profiles_user_content('ProfilesURLName', 'rachael.sak')">Show Rachael Sak</a>
+	      <a class="btn btn-default" href="javascript:void(0)" onclick="add_profiles_user_content('ProfilesURLName', 'jeffrey.bluestone')">Show Jeff Bluestone</a>
+	    </div>
+
+	    <h5>3. Learn how it works:</h5>
+
+	    <ul>
+	      <li>View the HTML source for this page to see how we built it</li>
+	      <li>Explore the <a href="http://api.profiles.ucsf.edu/json/v2/?ProfilesURLName=jeanette.brown&amp;publications=full&source=JSON_API_v2_example_script_change_this_in_your_own_app">JSON output</a> from the API</li>
+	    </ul>
+
+
+	  </div>
+	</div>
+
+
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+<!-- End page content -->
+
+<!-- Google Map -->
+<div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<!-- Add slideshow script -->
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000);
+}
+
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+<!-- Google Map Location -->
+var myCenter = new google.maps.LatLng(37.7630086,-122.4602444);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</body>
+</html>
