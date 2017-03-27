@@ -1,96 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Anatomy Department UCSF</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="banners.css">
-</head>
-<body>
+  <head>
+    <title>Anatomy Department UCSF</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="banners.css">
+  </head>
 
 <!-- UCSF Banner Here -->
-<div class="w3-top">
-  <div id="ucsf-banner-nav" class="no-logo">
-    <div class="top-header-container row">
-        <ul class="menu">
-          <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
-          <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
-          <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
-          <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
-        </ul>
-    </div>
-  </div>
 
+  <div class="w3-top">
+    <div id="ucsf-banner-nav" class="no-logo">
+      <div class="top-header-container row">
+          <ul class="menu">
+            <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+            <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+            <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+            <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+          </ul>
+      </div>
+    </div>
+<!--END UCSF BANNER-->
+<!--START BODY -->
+
+<body>
 
 <!-- Navbar (sit on top) -->
+<div class="w3-content w3-display-container">
   <div class="w3-bar w3-white w3-card-2" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Anatomy Department</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="#about" class="w3-bar-item w3-button">About Us</a>
+      <a href="#team" class="w3-bar-item w3-button">Faculty</a>
+      <a href="#work" class="w3-bar-item w3-button">Affiliated Faculty</a>
+      <a href="#pricing" class="w3-bar-item w3-button">Teaching</a>
+      <a href="#contact" class="w3-bar-item w3-button">Willed Body Program</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 </div>
-
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About Us</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Faculty</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Affiliated Faculty</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Teaching</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Willed Body</a>
 </nav>
 
+<!--header slideshow here-->
 
-<!-- Header Slideshow Here
-
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-
-    <div class="mySlides w3-display-container w3-center">
-      <img src="img/img1.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Rushika Perera</h3>
-        <p><b>pancreatic cancer cells have abundant autophagosomes</b></p>
-      </div>
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="img/img2.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Rushika Perera</h3>
-        <p><b>immunohistochemistry of patient pancreatic ductal adenocarinoma for the transcription factor TFE3
-organoids :  pancreatic tumor organoids grown in culture</b></p>
-      </div>
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="img/img3.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>image</h3>
-        <p><b>Cool Text About Image 3!</b></p>
-      </div>
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="img/img4.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>image</h3>
-        <p><b>Cool Text About Image 4!</b></p>
-      </div>
-    </div>
-</header>-->
-
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-
+<header>
 
 <div class="w3-content w3-display-container">
 
@@ -128,82 +95,19 @@ organoids :  pancreatic tumor organoids grown in culture</b></p>
     a nice image of some very fancy science world of wonder!
   </div>
 </div>
-
+<!--loose the buttons
 <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
 <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
-
-</div>
+buttons gone-->
 </div>
 </header>
+
 <!-- Page content -->
 
 <div class="w3-content w3-padding" style="max-width:1564px">
-
-
-
-<!-- another 3 col layout -->
-
-<div class="w3-row-padding w3-center w3-margin-top">
-
-  <div class="w3-third">
-    <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-    <span class="w3-tag"><h4>Recent News</h4></span><br></p>
-    <img src="img/cell1.jpg" alt="John" style="width:100%">
-    <p>news feed here</p>
-    <p>more interesting info</p>
-    <p>Read More...</p>
-    </div>
-  </div>
-
-  <div class="w3-third">
-    <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-    <span class="w3-tag"><h4>About Us</h4></span><br></p>
-    <img src="img/cell2.jpg" alt="John" style="width:100%">
-    <p>The Department of Anatomy includes 23 faculty members with primary full-time appointments, 16 faculty with joint appointments, and about 200 postdoctoral fellows and students engaged in research that covers questions in cell biology, developmental biology and the neurosciences. Faculty have laboratories at both the Parnassus Heights campus, where there is a focus of interest in cancer biology, and at the Mission Bay campus, where many of the neurobiology faculty are located. The administrative office of the Department is located at the Parnassus Heights campus. </p>
-    </div>
-  </div>
-
-  <div class="w3-third">
-    <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-    <span class="w3-tag"><h4>Student Profile</h4></span><br></p>
-    <img src="https://static1.squarespace.com/static/55a2fe26e4b07c31913bc8ee/55a41fafe4b011c52032ab82/57db6672cd0f6852c74a3de0/1477977398157/IMG_4426_+Erica_crop.jpg?format=300w" alt="John" style="width:50%">
-    <p>Here is a profile on this months Graduate Student Erica Sanchez in the Perrera Lab read more....</p>
-    </div>
-  </div>
-  </div>
-
-  <!-- another 3 col layout
-
-  <div class="w3-row-padding w3-center w3-margin-top">
-
-    <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-      <h4>Recent News</h4><br>
-      <img src="img/cell1.jpg" alt="John" style="width:100%">
-      <p>news feed here</p>
-      <p>more interesting info</p>
-      <p>Read More...</p>
-      </div>
-    </div>
-
-    <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-      <h4>About Us</h4><br>
-      <img src="img/cell2.jpg" alt="John" style="width:100%">
-      <p>The Department of Anatomy includes 23 faculty members with primary full-time appointments, 16 faculty with joint appointments, and about 200 postdoctoral fellows and students engaged in research that covers questions in cell biology, developmental biology and the neurosciences. Faculty have laboratories at both the Parnassus Heights campus, where there is a focus of interest in cancer biology, and at the Mission Bay campus, where many of the neurobiology faculty are located. The administrative office of the Department is located at the Parnassus Heights campus. </p>
-      </div>
-    </div>
-
-    <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-      <h4>Grad Student Profile</h4><br>
-      <img src="https://static1.squarespace.com/static/55a2fe26e4b07c31913bc8ee/55a41fafe4b011c52032ab82/57db6672cd0f6852c74a3de0/1477977398157/IMG_4426_+Erica_crop.jpg?format=300w" alt="John" style="width:50%">
-      <p>Here is a profile on this months Graduate Student Erica Sanchez in the Perrera Lab read more....</p>
-      </div>
-    </div>
-    </div>-->
-
+<!--page content goes here-->
 </div>
+
 <!-- End page content -->
 
 <!-- Google Map -->
@@ -266,7 +170,6 @@ window.onclick = function(event) {
   }
 }
 </script>
-
 
 
 </body>
