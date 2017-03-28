@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="banners.css">
 </head>
+
+
 <body>
 
 <!-- UCSF Banner Here -->
@@ -20,6 +22,8 @@
         </ul>
     </div>
   </div>
+
+
 
  <!-- Navbar (sit on top) -->
   <ul class="w3-navbar w3-white w3-wide w3-padding-8 w3-card-2">
@@ -108,43 +112,9 @@
     </div>
   </div>
   </div>
-
-  <!-- another 3 col layout
-
-  <div class="w3-row-padding w3-center w3-margin-top">
-
-    <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-      <h4>Recent News</h4><br>
-      <img src="img/cell1.jpg" alt="John" style="width:100%">
-      <p>news feed here</p>
-      <p>more interesting info</p>
-      <p>Read More...</p>
-      </div>
-    </div>
-
-    <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-      <h4>About Us</h4><br>
-      <img src="img/cell2.jpg" alt="John" style="width:100%">
-      <p>The Department of Anatomy includes 23 faculty members with primary full-time appointments, 16 faculty with joint appointments, and about 200 postdoctoral fellows and students engaged in research that covers questions in cell biology, developmental biology and the neurosciences. Faculty have laboratories at both the Parnassus Heights campus, where there is a focus of interest in cancer biology, and at the Mission Bay campus, where many of the neurobiology faculty are located. The administrative office of the Department is located at the Parnassus Heights campus. </p>
-      </div>
-    </div>
-
-    <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-      <h4>Grad Student Profile</h4><br>
-      <img src="https://static1.squarespace.com/static/55a2fe26e4b07c31913bc8ee/55a41fafe4b011c52032ab82/57db6672cd0f6852c74a3de0/1477977398157/IMG_4426_+Erica_crop.jpg?format=300w" alt="John" style="width:50%">
-      <p>Here is a profile on this months Graduate Student Erica Sanchez in the Perrera Lab read more....</p>
-      </div>
-    </div>
-    </div>-->
-
 </div>
 <!-- End page content -->
 
-<!-- Google Map -->
-<div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
@@ -187,34 +157,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-</script>
-
-<!-- Add Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-
-<script>
-<!-- Google Map Location -->
-var myCenter = new google.maps.LatLng(37.7630086,-122.4602444);
-
-function initialize() {
-var mapProp = {
-  center: myCenter,
-  zoom: 12,
-  scrollwheel: false,
-  draggable: false,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-  position: myCenter,
-});
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
 </body>
